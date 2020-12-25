@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2_076_ZulfaFathianYahya", "Exercise2_076_ZulfaFathianYahya\Exercise2_076_ZulfaFathianYahya.csproj", "{8F411C5B-EAE8-48E9-B386-215F188D3492}"
+	ProjectSection(ProjectDependencies) = postProject
+		{62837383-BC12-45B7-B7F5-56410B736A90} = {62837383-BC12-45B7-B7F5-56410B736A90}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service_076_ZulfaFathianYahya", "Service_076_ZulfaFathianYahya\Service_076_ZulfaFathianYahya.csproj", "{62837383-BC12-45B7-B7F5-56410B736A90}"
 EndProject
