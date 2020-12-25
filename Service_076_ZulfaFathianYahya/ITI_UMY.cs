@@ -29,7 +29,7 @@ namespace Service_076_ZulfaFathianYahya
         string DeleteMahasiswa(string nim);
 
         [OperationContract]
-        [WebInvoke(Method = "UPDT", UriTemplate = "UpdateMahasiswaByNIM", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "PUT", UriTemplate = "UpdateMahasiswaByNIM", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         string UpdateMahasiswaByNIM(Mahasiswa mhs);
 
 

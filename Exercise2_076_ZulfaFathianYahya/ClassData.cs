@@ -46,14 +46,26 @@ namespace Exercise2_076_ZulfaFathianYahya
 
         public List<Mahasiswa> getAllData()
         {
-            var json = new WebClient().DownloadString("http://localhost:1920/Mahasiswa");
-            var data = JsonConvert.DeserializeObject<List<Mahasiswa>>(json);
+            List<Mahasiswa> data = new List<Mahasiswa>();
+            try
+            {
+                var json = new WebClient().DownloadString("http://localhost:1920/Mahasiswa");
+                data = JsonConvert.DeserializeObject<List<Mahasiswa>>(json);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.ReadLine();
+            }
+
+
             return data;
+
         }
 
-        public bool updateDatabase(Mahasiswa mhs)
+        public string updateDatabase(Mahasiswa mhs)
         {
-            bool updated = false;
+            string msg = "Sukses";
             try
             {
                 var client = new RestClient(baseUrl);
@@ -61,11 +73,16 @@ namespace Exercise2_076_ZulfaFathianYahya
                 request.AddJsonBody(mhs);
                 client.Execute(request);
             }
-            catch (Exception ex)
+            catch (Exception er)
             {
+                msg = "Gagal";
+                Console.WriteLine(er);
+                Console.ReadLine();
 
             }
-            return updated;
+
+
+            return msg;
         }
 
         public bool deleteMahasiswa(string nim)

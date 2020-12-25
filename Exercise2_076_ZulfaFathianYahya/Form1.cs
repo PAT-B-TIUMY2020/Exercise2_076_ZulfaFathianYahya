@@ -79,6 +79,7 @@ namespace Exercise2_076_ZulfaFathianYahya
 
             ClassData classData = new ClassData();
             classData.updateDatabase(mhs);
+            MessageBox.Show("Data successfuly updated");
             Clear();
             dtmhs.DataSource = classData.getAllData();
         }
